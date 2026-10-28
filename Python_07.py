@@ -20,7 +20,7 @@ def jpg_to_png (name: str):
         return np.argmin(euclidean_distances(X,Y), axis=1)
 
     K = 2
-    centers =np.array([image_pixels_lab.mean(0) + (i/10) for i in range(K)])
+    centers =np.array([image_pixels_lab.mean(0) + (np.random.randn(3)/10) for _ in range(K)])
     y_kmeans = cluster_assignments(image_pixels_lab, centers)
     last_centers = []
     antal = 0
