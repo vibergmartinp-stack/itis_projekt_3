@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import euclidean_distances
 
 from PIL import Image
 
-name = input("Hvad er navnet på din fil? ")
+name = input("What is the name of your file? ")
 def jpg_to_png (name: str):
     image_raw = imread(name)
     image_width = 300
@@ -48,6 +48,7 @@ def jpg_to_png (name: str):
             new_name=name[0:i:1]
     pil_img.save(new_name+'.png')                   
 
-    print(f"Din fil er nu gemt som {new_name}.png")
+    print(f"Your file is now saved as {new_name}.png")
+    print (f"It took {antal} to complete the clusters")
 
 jpg_to_png(name)
